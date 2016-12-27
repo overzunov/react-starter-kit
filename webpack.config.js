@@ -1,6 +1,6 @@
-var debug = process.env.NODE_ENV !== "production";
-var webpack = require('webpack');
-var path = require('path');
+const debug = process.env.NODE_ENV !== "production";
+const webpack = require('webpack');
+const path = require('path');
 
 module.exports = {
     context: path.join(__dirname, "src"),
@@ -73,9 +73,9 @@ module.exports = {
         stats: 'errors-only',
         host: '127.0.0.1', // Defaults to `localhost`
         port: 8080, // Defaults to 8080
-        proxy: [{
-            path: ["/api", "/signin", "/signout", "/book_covers"],
-            target: "http://127.0.0.1:3000/"
-        }]
+        // proxy: [{
+        //     path: ["/api", "/signin", "/signout", "/book_covers"],
+        //     target: "http://127.0.0.1:3000/"
+        // }]
     },
 };
